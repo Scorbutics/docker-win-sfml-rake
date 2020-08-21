@@ -18,7 +18,7 @@ RUN curl.exe -L -o ruby_dev.7z https://github.com/oneclick/rubyinstaller2/releas
     && setx /M PATH "%CD%\rubyinstaller-2.6.6-1-x86\bin\ruby_builtin_dlls;%PATH%" \
     && setx /M PATH "%CD%\rubyinstaller-2.6.6-1-x86\bin;%PATH%"
 
-RUN ridk enable && gem install rake-compiler
+RUN gem install rake-compiler
 
 RUN powershell Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 RUN scoop install cmake git wget
