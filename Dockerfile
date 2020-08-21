@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/windows/servercore:1909
+FROM mcr.microsoft.com/windows/servercore:1809
 
 RUN curl.exe -o 7za920.zip https://www.7-zip.org/a/7za920.zip \
     && mkdir 7z \
